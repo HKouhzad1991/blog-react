@@ -1,7 +1,10 @@
+import {BsInstagram} from 'react-icons/bs'
 function App() {
-    return (
-        <div>next1code.ir</div>
-    );
+  return (
+    <div style={{padding : '100px'}}>
+      <BsInstagram />
+    </div>
+  );
 }
 
 export default App;
