@@ -6,7 +6,7 @@ function App() {
         <div style={{padding : '100px'}}>
             <BsInstagram size='50px' />
             <ImTelegram size='50px'/>
-            <BsBugFill size='50px' color='#00ff00' />
+            <BsBugFill size='50px' color='red' />
         </div>
     );
 }
