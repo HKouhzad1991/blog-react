@@ -15,7 +15,7 @@ function MyNavbar() {
       expand={expand}
       className="mb-3">
       <Container>
-        <Navbar.Brand href="#">بلاگ نکست وان کد</Navbar.Brand>
+        <Navbar.Brand className="lalezar fs-4" href="#">بلاگ نکست وان کد</Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-${expand}`}

@@ -1,5 +1,11 @@
+import MyNavbar from "../../components/navbar/MyNavbar";
 function AddArticle() {
-  return <h1>add article</h1>;
+  return (
+    <>
+      <MyNavbar />
+      <h1>AddArticle page</h1>;
+    </>
+  );
 }
 
 export default AddArticle;
