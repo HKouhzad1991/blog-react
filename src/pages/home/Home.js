@@ -5,8 +5,11 @@ import { Container, Col, Row } from "react-bootstrap";
 import axios from "axios";
 
 function Home() {
+  
+const [articles, setArticles] = useState([]);
+
   useEffect(() => {
-    const =[Articles , setArticles] = useState()
+    
 
     axios
       .get("http://localhost:5000/articles")
