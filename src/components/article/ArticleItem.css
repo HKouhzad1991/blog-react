@@ -1,27 +1,22 @@
-.card {
-    border: none;
+.card{
+    border: none ;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: all 0.5s;
 }
-
-.card:hover {
+.card:hover{
     scale: 1.05;
 }
-
-.card-text {
-    text-align: center;
-    color: rgb(108, 103, 116);
+.card-text{
+    text-align: justify;
+    color: #5d5c5c;
 }
-
-.read-more span {
+.read-more span{
     margin-left: 5px;
 }
-
 .read-more:hover{
     cursor: pointer;
-    color: hsl(344, 100%, 54%);
+    color: #f54980;
 }
-
 .card-footer{
-    color:hsl(0, 0%, 46%)!important;
+    color: #666 !important;
 }

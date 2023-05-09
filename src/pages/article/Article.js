@@ -1,5 +1,7 @@
 function Article() {
-  return <h1>article page</h1>;
+    return (
+        <h1>Article Page</h1>
+    );
 }
 
 export default Article;

@@ -1,5 +1,7 @@
 function EditArticle() {
-  return <h1>Edit article</h1>;
+    return (
+        <h1>EditArticle Page</h1>
+    );
 }
 
 export default EditArticle;
