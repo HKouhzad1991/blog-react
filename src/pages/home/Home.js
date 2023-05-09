@@ -13,7 +13,7 @@ const [articles, setArticles] = useState([]);
 
     axios
       .get("http://localhost:5000/articles")
-      .then((response) => console.log(response.data));
+      .then((response) => setArticles(response.data));
   }, []);
   return (
     <>
@@ -21,30 +21,11 @@ const [articles, setArticles] = useState([]);
       <Container>
         <h1 style={{ marginTop: "20px" }}>لیست مقالات</h1>
         <Row className="row-col-1 row-row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-4 py-3">
-          <Col>
-            <ArticleItem />
-          </Col>
-          <Col>
-            <ArticleItem />
-          </Col>
-          <Col>
-            <ArticleItem />
-          </Col>
-          <Col>
-            <ArticleItem />
-          </Col>
-          <Col>
-            <ArticleItem />
-          </Col>
-          <Col>
-            <ArticleItem />
-          </Col>
-          <Col>
-            <ArticleItem />
-          </Col>
-          <Col>
-            <ArticleItem />
-          </Col>
+          {articles.map((article) => (
+            <Col>
+              <ArticleItem />
+            </Col>
+          ))}
         </Row>
       </Container>
     </>
