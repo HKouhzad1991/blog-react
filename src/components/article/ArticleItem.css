@@ -4,10 +4,11 @@
     transition: all 0.5s;
 }
 
-.card:hover{
+.card:hover {
     scale: 1.05;
 }
 
-.card-text{
-    
+.card-text {
+    text-align: center;
+     color: rgb(108, 103, 116);
 }
