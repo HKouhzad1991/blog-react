@@ -10,5 +10,18 @@
 
 .card-text {
     text-align: center;
-     color: rgb(108, 103, 116);
+    color: rgb(108, 103, 116);
+}
+
+.read-more span {
+    margin-left: 5px;
+}
+
+.read-more:hover{
+    cursor: pointer;
+    color: hsl(344, 100%, 54%);
+}
+
+.card-footer{
+    color:hsl(0, 0%, 46%)!important;
 }
