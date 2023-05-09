@@ -4,7 +4,7 @@ import { TiArrowLeftThick } from "react-icons/ti";
 import './ArticleItem.css'
 function ArticleItems() {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card >
       <Card.Img
         variant="top"
         src="http://dl.next1code.ir/images/react/article1.webp"
