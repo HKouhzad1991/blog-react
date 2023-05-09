@@ -1,12 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ArticleItem from "../../components/article/ArticleItem";
 import MyNavbar from "../../components/navbar/MyNavbar";
 import { Container, Col, Row } from "react-bootstrap";
 import axios from "axios";
 
 function Home() {
-
   useEffect(() => {
+    const =[Articles , setArticles] = useState()
+
     axios
       .get("http://localhost:5000/articles")
       .then((response) => console.log(response.data));
