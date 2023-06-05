@@ -1,10 +1,13 @@
 import MyNavbar from "../../components/navbar/MyNavbar";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import './AddArticle.css'
 
 function AddArticle() {
     return (
       <>
         <MyNavbar />
-        <div>
+        <div className="formContainer">
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -21,8 +24,8 @@ function AddArticle() {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
+            <Button variant="primary" type="button">
+              ساخت مقاله
             </Button>
           </Form>
         </div>
