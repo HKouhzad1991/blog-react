@@ -3,8 +3,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./AddArticle.css";
 import axios from "axios";
+import { useState } from "react";
 
 function AddArticle() {
+
+  const [titleState ,setTitleState] = useState('')
   const addArticleHandler = () => {
     axios.post("http://localhost:5000/articles", {
       title: "عنوان مقاله دهم",
