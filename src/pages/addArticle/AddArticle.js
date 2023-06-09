@@ -16,6 +16,10 @@ function AddArticle() {
     });
   };
 
+  const titleInputHandler = () => {
+    
+  } 
+
   return (
     <>
       <MyNavbar />
@@ -23,7 +27,7 @@ function AddArticle() {
         <Form>
           <Form.Group className="mb-3">
             <Form.Label>عنوان مقاله</Form.Label>
-            <Form.Control type="text" placeholder="عنوان مقاله را وارد کنید" />
+            <Form.Control onChange={titleInputHandler} type="text" placeholder="عنوان مقاله را وارد کنید" />
           </Form.Group>
 
           <Form.Group className="mb-3">
