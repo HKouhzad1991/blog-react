@@ -1,6 +1,5 @@
-.formContainer {
-max-width: 700px;
-margin: auto;
-padding: 0 16px;
-
+.formContainer{
+    max-width: 700px;
+    margin: auto;
+    padding: 0 16px;
 }
