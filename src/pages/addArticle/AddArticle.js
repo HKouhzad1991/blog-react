@@ -6,30 +6,42 @@ import axios from "axios";
 import { useState } from "react";
 
 function AddArticle() {
-
   const [titleState, setTitleState] = useState("");
   const [descState, setDescState] = useState("");
   const [writterState, setWritterState] = useState("");
   const [categoryState, setCategoryState] = useState("");
   const [imageState, setImageState] = useState("");
   const [readingTimeState, setReadingTimeState] = useState("");
-  
-  
+
   const addArticleHandler = () => {
     axios.post("http://localhost:5000/articles", {
-      title: "عنوان مقاله دهم",
-      desc: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک",
-      writter: "میلاد",
-      category: "وب",
-      image: "https://dl.next1code.ir/images/react/article8.webp",
-      readingTime: 55,
+      title: titleState,
+      desc: descState,
+      writter: writterState,
+      category: categoryState,
+      image: imageState,
+      readingTime: readingTimeState,
     });
   };
 
   const titleInputHandler = (e) => {
     setTitleState(e.target.value);
   };
-
+  const descInputHandler = (e) => {
+    setDescState(e.target.value);
+  };
+  const writterInputHandler = (e) => {
+    setWritterState(e.target.value);
+  };
+  const categoryInputHandler = (e) => {
+    setCategoryState(e.target.value);
+  };
+  const imageInputHandler = (e) => {
+    setImageState(e.target.value);
+  };
+  const readingTimeInputHandler = (e) => {
+    setReadingTimeState(e.target.value);
+  };
   return (
     <>
       <MyNavbar />
