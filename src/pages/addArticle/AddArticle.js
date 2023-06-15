@@ -6,42 +6,42 @@ import axios from "axios";
 import { useState } from "react";
 
 function AddArticle() {
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
-  const [writter, setWritter] = useState("");
-  const [category, setCategory] = useState("");
-  const [image, setImage] = useState("");
-  const [readingTime, setReadingTime] = useState("");
+  // const [title, setTitle] = useState("");
+  // const [desc, setDesc] = useState("");
+  // const [writter, setWritter] = useState("");
+  // const [category, setCategory] = useState("");
+  // const [image, setImage] = useState("");
+  // const [readingTime, setReadingTime] = useState("");
 
   const addArticleHandler = () => {
-    axios.post("http://localhost:5000/articles", {
-      title,
-      desc,
-      writter,
-      category,
-      image,
-      readingTime,
-    })
+    // axios.post("http://localhost:5000/articles", {
+    //   title,
+    //   desc,
+    //   writter,
+    //   category,
+    //   image,
+    //   readingTime,
+    // })
   };
 
-  const titleInputHanlder = (e) => {
-    setTitle(e.target.value);
-  };
-  const descInputHanlder = (e) => {
-    setDesc(e.target.value);
-  };
-  const writterInputHanlder = (e) => {
-    setWritter(e.target.value);
-  };
-  const categoryInputHanlder = (e) => {
-    setCategory(e.target.value);
-  };
-  const imageInputHanlder = (e) => {
-    setImage(e.target.value);
-  };
-  const readingTimeInputHanlder = (e) => {
-    setReadingTime(e.target.value);
-  };
+  // const titleInputHanlder = (e) => {
+  //   setTitle(e.target.value);
+  // };
+  // const descInputHanlder = (e) => {
+  //   setDesc(e.target.value);
+  // };
+  // const writterInputHanlder = (e) => {
+  //   setWritter(e.target.value);
+  // };
+  // const categoryInputHanlder = (e) => {
+  //   setCategory(e.target.value);
+  // };
+  // const imageInputHanlder = (e) => {
+  //   setImage(e.target.value);
+  // };
+  // const readingTimeInputHanlder = (e) => {
+  //   setReadingTime(e.target.value);
+  // };
 
   return (
     <>
@@ -51,7 +51,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>عنوان مقاله</Form.Label>
             <Form.Control
-              onChange={titleInputHanlder}
+              onChange={(e) => formHandler(e , 'title')}
               type="text"
               placeholder="عنوان مقاله را وارد کنید"
             />
