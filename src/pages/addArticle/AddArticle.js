@@ -51,7 +51,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>عنوان مقاله</Form.Label>
             <Form.Control
-              onChange={(e) => formHandler(e , 'title')}
+              onChange={(e) => formHandler(e, "title")}
               type="text"
               placeholder="عنوان مقاله را وارد کنید"
             />
@@ -60,7 +60,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>توضیح کوتاه</Form.Label>
             <Form.Control
-              onChange={descInputHanlder}
+              onChange={(e) => formHandler(e, "desc")}
               type="text"
               placeholder="یه توضیح کوتاه در مورد مقاله وارد کنید"
             />
@@ -69,7 +69,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>نویسنده مقاله</Form.Label>
             <Form.Control
-              onChange={writterInputHanlder}
+              onChange={(e) => formHandler(e, "writter")}
               type="text"
               placeholder="نام نویسنده مقاله را وارد کنید"
             />
@@ -78,7 +78,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>موضوع مقاله</Form.Label>
             <Form.Control
-              onChange={categoryInputHanlder}
+              onChange={(e) => formHandler(e, "category")}
               type="text"
               placeholder="موضوع مقاله را وارد کنید"
             />
@@ -87,7 +87,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>عکس مقاله</Form.Label>
             <Form.Control
-              onChange={imageInputHanlder}
+              onChange={(e) => formHandler(e, "image")}
               type="text"
               placeholder="عکس مقاله را وارد کنید"
             />
@@ -96,7 +96,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>مدت زمان خواندن</Form.Label>
             <Form.Control
-              onChange={readingTimeInputHanlder}
+              onChange={(e) => formHandler(e, "readingTime")}
               type="number"
               placeholder=""
             />
