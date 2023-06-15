@@ -12,9 +12,10 @@ function AddArticle() {
     axios.post("http://localhost:5000/articles", formData);
   };
 
-  const formHandler = (e, propertyName) => {
-    setFormData({ ...formData, [propertyName]: e.target.value });
+  const formHandler = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
 
   return (
     <>
