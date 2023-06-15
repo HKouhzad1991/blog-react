@@ -4,18 +4,49 @@ import Form from "react-bootstrap/Form";
 import "./AddArticle.css";
 import axios from "axios";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 function AddArticle() {
   const [formData, setFormData] = useState({});
 
+  const resetFormData = () => {
+    setFormData({
+      title: "",
+      desc: "",
+      image: "",
+      writter: "",
+      category: "",
+      readingTime: "",
+    });
+  };
   const addArticleHandler = () => {
-    axios.post("http://localhost:5000/articles", formData);
+    axios
+      .post("http://localhost:5000/articles", formData)
+      .then((response) => {
+        if (response.status === 201) {
+          Swal.fire({
+            title: "مقاله جدید با موفقیت ساخته شد",
+            timer: 1500,
+            timerProgressBar: true,
+            showConfirmButton: false,
+          });
+        }
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "مقاله ساخته نشد",
+          timer: 1500,
+          icon: "error",
+          timerProgressBar: true,
+          showConfirmButton: false,
+        });
+      });
+    resetFormData();
   };
 
   const formHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
 
   return (
     <>
@@ -25,6 +56,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>عنوان مقاله</Form.Label>
             <Form.Control
+              value={formData.title}
               name="title"
               onChange={formHandler}
               type="text"
@@ -35,6 +67,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>توضیح کوتاه</Form.Label>
             <Form.Control
+              value={formData.desc}
               name="desc"
               onChange={formHandler}
               type="text"
@@ -45,6 +78,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>نویسنده مقاله</Form.Label>
             <Form.Control
+              value={formData.writter}
               name="writter"
               onChange={formHandler}
               type="text"
@@ -55,6 +89,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>موضوع مقاله</Form.Label>
             <Form.Control
+              value={formData.category}
               name="category"
               onChange={formHandler}
               type="text"
@@ -65,6 +100,7 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>عکس مقاله</Form.Label>
             <Form.Control
+              value={formData.image}
               name="image"
               onChange={formHandler}
               type="text"
@@ -75,7 +111,8 @@ function AddArticle() {
           <Form.Group className="mb-3">
             <Form.Label>مدت زمان خواندن</Form.Label>
             <Form.Control
-              name="readingTime" 
+              value={formData.readingTime}
+              name="readingTime"
               onChange={formHandler}
               type="number"
               placeholder=""
