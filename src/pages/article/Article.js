@@ -7,6 +7,7 @@ import { BsPencilSquare } from "react-icons/bs";
 import { BiTimeFive } from "react-icons/bi";
 import { BiCategoryAlt } from "react-icons/bi";
 import { MdDelete, MdOutlineEditCalendar } from "react-icons/md";
+import "./Article.css";
 
 function Article() {
   const articleId = useParams().articleId;
@@ -24,7 +25,7 @@ function Article() {
       <MyNavbar />
 
       <Container>
-        <Row>
+        <Row style={{ marginTop: "70px" }}>
           <Col lg={4}>
             <div className="articleCardContainer">
               <div className="cardHeader">
