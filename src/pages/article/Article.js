@@ -8,7 +8,7 @@ function Article() {
     
     useEffect(() => {
         axios.get("http://localhost:3000/article/${articleId}");
-        
+        .then(response => console.log(response))
     } , {})
   
 
