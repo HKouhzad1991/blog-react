@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MyNavbar from "../../components/navbar/MyNavbar";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { BsPencilSquare } from "react-icons/bs";
 import { BiTimeFive } from "react-icons/bi";
 import { BiCategoryAlt } from "react-icons/bi";
@@ -41,12 +41,15 @@ function Article() {
                   مدت زمان مطالعه:<b>5 دقیقه</b>
                 </p>
                 <p>
-                  <BiCategoryAlt size='20px' />
+                  <BiCategoryAlt size="20px" />
                   دسته بندی : <b> برنامه نویسی وب</b>
-
                 </p>
               </div>
-              <div className="cardFooter"></div>
+              <div className="cardFooter">
+                <Button>حذف مقاله</Button>
+
+                <Button>ویرایش مقاله</Button>
+              </div>
             </div>
           </Col>
           <Col lg={8}>
