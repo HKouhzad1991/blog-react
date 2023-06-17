@@ -6,6 +6,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { BsPencilSquare } from "react-icons/bs";
 import { BiTimeFive } from "react-icons/bi";
 import { BiCategoryAlt } from "react-icons/bi";
+import { MdDelete, MdOutlineEditCalendar } from "react-icons/md";
 
 function Article() {
   const articleId = useParams().articleId;
@@ -46,9 +47,15 @@ function Article() {
                 </p>
               </div>
               <div className="cardFooter">
-                <Button>حذف مقاله</Button>
+                <Button variant="outline-danger">
+                  <MdDelete size="25px" />
+                  حذف مقاله
+                </Button>
 
-                <Button>ویرایش مقاله</Button>
+                <Button variant="outline-primary">
+                  <MdOutlineEditCalendar size="25px" />
+                  ویرایش مقاله
+                </Button>
               </div>
             </div>
           </Col>
