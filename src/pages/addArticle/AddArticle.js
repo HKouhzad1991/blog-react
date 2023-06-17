@@ -11,42 +11,41 @@ function AddArticle() {
 
   const resetFormData = () => {
     setFormData({
-      title: "",
-      desc: "",
-      image: "",
-      writter: "",
-      category: "",
-      readingTime: "",
-    });
-  };
+        title : '',
+        desc : '',
+        image : '',
+        writter : '',
+        category : '',
+        readingTime : ''
+    })
+  }
   const addArticleHandler = () => {
-    axios
-      .post("http://localhost:5000/articles", formData)
-      .then((response) => {
-        if (response.status === 201) {
-          Swal.fire({
-            title: "مقاله جدید با موفقیت ساخته شد",
-            timer: 1500,
-            timerProgressBar: true,
-            showConfirmButton: false,
-          });
+    axios.post("http://localhost:5000/articles", formData)
+    .then(response => {
+        if(response.status === 201){
+            Swal.fire({
+                title : 'مقاله جدید با موفقیت ساخته شد',
+                timer : 1500,
+                timerProgressBar : true,
+                showConfirmButton : false
+            })
         }
-      })
-      .catch((error) => {
+    })
+    .catch(error => {
         Swal.fire({
-          title: "مقاله ساخته نشد",
-          timer: 1500,
-          icon: "error",
-          timerProgressBar: true,
-          showConfirmButton: false,
-        });
-      });
-    resetFormData();
-  };
+            title : 'مقاله ساخته نشد',
+            timer : 1500,
+            icon : 'error',
+            timerProgressBar : true,
+            showConfirmButton : false
+        })
+    })
+    resetFormData()
+  }
 
   const formHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  }
 
   return (
     <>

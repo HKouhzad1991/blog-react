@@ -20,7 +20,7 @@
 .card-footer{
     color: #666 !important;
 }
-
 .card a {
-     text-decoration: none;
+    text-decoration: none;
+    color: #484848;
 }
