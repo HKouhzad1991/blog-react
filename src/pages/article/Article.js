@@ -44,8 +44,7 @@ function Article() {
   };
 
   const editArticleHandler = (articleId) => {
-    navigate('/edit-article/articleId')
-
+    navigate("/edit-article/articleId");
   };
 
   return (
@@ -83,12 +82,12 @@ function Article() {
                   حذف مقاله
                 </Button>
 
-                <Button
-                  onClick={() => editArticleHandler(articleId)}
-                  variant="outline-primary">
-                  <MdOutlineEditCalendar size="25px" />
-                  ویرایش مقاله
-                </Button>
+                <Link to={"/edit-article/articleId"}>
+                  <Button variant="outline-primary">
+                    <MdOutlineEditCalendar size="25px" />
+                    ویرایش مقاله
+                  </Button>
+                </Link>
               </div>
             </div>
           </Col>
