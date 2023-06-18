@@ -14,7 +14,9 @@ function App() {
         <Route path="/add-article" element={<AddArticle />} />
         <Route path="/article/:articleId" element={<Article />} />
         <Route path="/edit-article/:articleId" element={<EditArticle />} />
-      </Routes>
+      </Routes>   
+      
+
     </BrowserRouter>
   );
 }

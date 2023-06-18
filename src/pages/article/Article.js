@@ -21,7 +21,7 @@ function Article() {
       .then((response) => setArticleData(response.data));
   }, []);
 
-  const deleteArticleHandler = (id) => {
+  const deleteArticleHandler = (articleId) => {
     Swal.fire({
       title: "مطمئنی میخوای مقاله را حذف کنی?",
       text: "You won't be able to revert this!",
@@ -39,13 +39,14 @@ function Article() {
         });
       }
     });
-    axios.delete(`http://localhost:5000/articles/${id}`);
-    navigate('/')
+    axios.delete(`http://localhost:5000/articles/${articleId}`);
+    navigate("/");
   };
 
-  const editArticleHandler = (id) => {
-    
-  }
+  const editArticleHandler = (articleId) => {
+    navigate('/edit-article/articleId')
+
+  };
 
   return (
     <>

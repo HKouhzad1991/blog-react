@@ -1,6 +1,6 @@
 .card{
     border: none ;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(100, 15, 146, 0.24) 0px 3px 8px;
     transition: all 0.5s;
 }
 .card:hover{
@@ -8,7 +8,7 @@
 }
 .card-text{
     text-align: justify;
-    color: #5d5c5c;
+    color: #860780;
 }
 .read-more span{
     margin-left: 5px;
@@ -18,9 +18,9 @@
     color: #f54980;
 }
 .card-footer{
-    color: #666 !important;
+    color: #204572 !important;
 }
 .card a {
     text-decoration: none;
-    color: #484848;
+    color: #0f7488;
 }
