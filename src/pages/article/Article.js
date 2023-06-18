@@ -20,6 +20,10 @@ function Article() {
       .then((response) => setArticleData(response.data));
   }, []);
 
+  const deleteArticleHandler = (id) => {
+    axios.delete(`http://localhost:5000/articles/${id}`);
+  };
+
   return (
     <>
       <MyNavbar />
@@ -48,7 +52,9 @@ function Article() {
                 </p>
               </div>
               <div className="cardFooter">
-                <Button variant="outline-danger">
+                <Button
+                  onClick={() => deleteArticleHandler(articleId)}
+                  variant="outline-danger">
                   <MdDelete size="25px" />
                   حذف مقاله
                 </Button>
