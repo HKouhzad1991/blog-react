@@ -43,6 +43,10 @@ function Article() {
     navigate('/')
   };
 
+  const editArticleHandler = (id) => {
+    
+  }
+
   return (
     <>
       <MyNavbar />
@@ -78,7 +82,9 @@ function Article() {
                   حذف مقاله
                 </Button>
 
-                <Button variant="outline-primary">
+                <Button
+                  onClick={() => editArticleHandler(articleId)}
+                  variant="outline-primary">
                   <MdOutlineEditCalendar size="25px" />
                   ویرایش مقاله
                 </Button>
