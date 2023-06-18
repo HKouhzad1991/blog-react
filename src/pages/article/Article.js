@@ -13,7 +13,7 @@ import Swal from "sweetalert2";
 function Article() {
   const articleId = useParams().articleId;
   const [articleData, setArticleData] = useState({});
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -40,6 +40,7 @@ function Article() {
       }
     });
     axios.delete(`http://localhost:5000/articles/${id}`);
+    navigate('/')
   };
 
   return (
