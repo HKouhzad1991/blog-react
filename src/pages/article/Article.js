@@ -8,6 +8,7 @@ import { BiTimeFive } from "react-icons/bi";
 import { BiCategoryAlt } from "react-icons/bi";
 import { MdDelete, MdOutlineEditCalendar } from "react-icons/md";
 import "./Article.css";
+import Swal from "sweetalert2";
 
 function Article() {
   const articleId = useParams().articleId;
@@ -22,13 +23,14 @@ function Article() {
 
   const deleteArticleHandler = (id) => {
     Swal.fire({
-      title: "مطمئنی میخوای مقاله را حذف کنی",
+      title: "مطمئنی میخوای مقاله را حذف کنی?",
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "بله حذفش کن",
+      cancelButtonText: 'نه'
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
