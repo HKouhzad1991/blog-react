@@ -21,6 +21,20 @@ function Article() {
   }, []);
 
   const deleteArticleHandler = (id) => {
+    Swal.fire({
+      title: "مطمئنی میخوای مقاله را حذف کنی",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+
     axios.delete(`http://localhost:5000/articles/${id}`);
   };
 
