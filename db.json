@@ -48,7 +48,7 @@
     {
       "id": 6,
       "image": "https://dl.next1code.ir/images/react/article6.webp",
-      "title": "عنوان مقاله ششم",
+      "title": "عنوان مقاله پنجم",
       "desc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .",
       "writter": "عباس",
       "category": "رابط کاربری",
@@ -62,6 +62,15 @@
       "writter": "عباس",
       "category": "برنامه نویسی وب",
       "readingTime": "20"
+    },
+    {
+      "id": 8,
+      "image": "https://dl.next1code.ir/images/react/article8.webp",
+      "title": "عنوان مقاله هشتم",
+      "desc": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .",
+      "writter": "عباس",
+      "category": "رابط کاربری",
+      "readingTime": "6"
     }
   ]
 }
