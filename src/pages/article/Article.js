@@ -35,11 +35,10 @@ function Article() {
       if (result.isConfirmed) {
         Swal.fire({
           title: "مقاله با موفقیت حذف شد",
-          icon: 'success'
+          icon: "success",
         });
       }
     });
-
     axios.delete(`http://localhost:5000/articles/${id}`);
   };
 
