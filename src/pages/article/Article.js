@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import MyNavbar from "../../components/navbar/MyNavbar";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { BsPencilSquare } from "react-icons/bs";
@@ -12,8 +12,8 @@ import Swal from "sweetalert2";
 
 function Article() {
   const articleId = useParams().articleId;
-
   const [articleData, setArticleData] = useState({});
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios
