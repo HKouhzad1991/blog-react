@@ -30,10 +30,13 @@ function Article() {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "بله حذفش کن",
-      cancelButtonText: 'نه'
+      cancelButtonText: "نه",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire({
+          title: "مقاله با موفقیت حذف شد",
+          icon: 'success'
+        });
       }
     });
 
